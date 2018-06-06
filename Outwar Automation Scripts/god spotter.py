@@ -39,7 +39,7 @@ def godspotter():
 		x=2 #controls row loop. START AT row 2
 		y=1 #controls column loop [1-2]
 		Tablelen=(len(rowCount))#Count how many bosses are spawned
-		while (x <= Tablelen): #Each iteration of x has 2 y's
+		while (x <= Tablelen): #Iterate through HTML table. Each iteration of x has 2 y's
 			while (y < 3):
 				result=browser.wait.until(EC.presence_of_element_located(
 					(By.XPATH, '//tr['+str(x)+']/td['+str(y)+']/strong/a/font')))
