@@ -42,7 +42,8 @@ def godspotter():
 		while (x <= Tablelen): #Iterate through HTML table. Each iteration of x has 2 y's
 			while (y < 3):
 				result=browser.wait.until(EC.presence_of_element_located(
-					(By.XPATH, '//tr['+str(x)+']/td['+str(y)+']/strong/a/font')))
+					(By.XPATH, '//tr['+str(x)+']/td['+str(y)+']/strong/a/font'))) #Inputs the current values for iteartion
+				#The following gets the strings of the bosses that are spawned, parses them and saves them to a list
 				name= result.get_attribute('innerHTML')
 				name= name.split("Teleport to ")[1]#Strip unecessary words
 				gods.append(name)
