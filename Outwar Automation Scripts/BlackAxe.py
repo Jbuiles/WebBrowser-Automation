@@ -64,7 +64,7 @@ def joinraid():
         print('Successful Join')
 
 def launchraid():
-	browser.get('https://+yourserver+.outwar.com/world?suid=')#Your Raid Former
+	browser.get('https://'+yourserver+'.outwar.com/world?suid=')#Your Raid Former
 	try:
 		raid = browser.wait.until(EC.presence_of_element_located(
                     (By.CSS_SELECTOR, '#roomDetails > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) > a:nth-child(1) > img:nth-child(1)')))
