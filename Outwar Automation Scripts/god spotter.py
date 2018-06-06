@@ -34,11 +34,11 @@ def login():
 def godspotter():
 	try:
 		browser.get('http://'+server+'.outwar.com/raidtools')
-		table ='/html/body/center/div/div[3]/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr' #XPATH  of god raid info
+		table ='/html/body/center/div/div[3]/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr' #Location of boss info
 		rowCount=browser.find_elements_by_xpath(table)
-		x=2 #controls row loop. START AT 2 because row 1 is empty
-		y=1 #controls column loop
-		Tablelen=(len(rowCount))
+		x=2 #controls row loop. START AT row 2
+		y=1 #controls column loop [1-2]
+		Tablelen=(len(rowCount))#Count how many bosses are spawned
 		while (x <= Tablelen): #Each iteration of x has 2 y's
 			while (y < 3):
 				result=browser.wait.until(EC.presence_of_element_located(
