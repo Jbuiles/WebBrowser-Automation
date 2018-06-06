@@ -9,8 +9,8 @@ from selenium.common.exceptions import TimeoutException
 options = Options()
 options.set_headless(headless=True)
 
-login= 'YOURUSERNAME'
-password='YOURPASSWORD'
+yourlogin= 'YOURUSERNAME'
+yourpassword='YOURPASSWORD'
 server= 'YOURSERVER'
 gods=[]
 
@@ -24,8 +24,8 @@ def login():
 	browser.get('https://'+server+'.outwar.com/login')
 	user = browser.find_element_by_name('login_username')
 	password = browser.find_element_by_name('login_password')
-	user.send_keys(login)
-	password.send_keys(password)
+	user.send_keys(yourlogin)
+	password.send_keys(yourpassword)
 	submit = browser.find_element_by_name('submitit')
 	submit.submit()
 	print('Successful Login')
