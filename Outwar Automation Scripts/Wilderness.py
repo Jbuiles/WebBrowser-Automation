@@ -22,18 +22,18 @@ def init_driver():
     return browser
 
 def login():
-	browser.get('https://+yourserver+.outwar.com/login')
+	browser.get('https://'+yourserver+'.outwar.com/login')
 	user = browser.find_element_by_name('login_username')
 	password = browser.find_element_by_name('login_password')
-	user.send_keys('yourlogin')
-	password.send_keys('yourpassword')
+	user.send_keys(yourlogin)
+	password.send_keys(yourpassword)
 	submit = browser.find_element_by_name('submitit')
 	submit.submit()
 	print('Successful Login')
 	time.sleep(2)
 	
 def wilderness():
-  browser.get('https://+yourserver+.outwar.com/world?suid=yourid')
+  browser.get('https://'+yourserver+'.outwar.com/world?suid=yourid')
 	getToWilderness = browser.find_element_by_css_selector('Wilderness')
 	getToWilderness.click()
 	while True:
