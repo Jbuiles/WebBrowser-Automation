@@ -22,7 +22,7 @@ def init_driver():
     return browser
 
 def login():
-	browser.get('https://+yourserver+.outwar.com/login')
+	browser.get('https://'+yourserver+'.outwar.com/login')
 	user = browser.find_element_by_name('login_username')
 	password = browser.find_element_by_name('login_password')
 	user.send_keys(yourlogin)
@@ -33,7 +33,7 @@ def login():
 	time.sleep(2)
 	
 def formraid():
-	browser.get('https://+yourserver+.outwar.com/world?suid=')#Your Raid Former
+	browser.get('https://'+yourserver+'.outwar.com/world?suid=')#Your Raid Former
 	try:
 		button1 = browser.wait.until(EC.presence_of_element_located(
                     (By.CSS_SELECTOR, 'img[alt="Attack!"]')))
@@ -64,7 +64,7 @@ def joinraid():
         print('Successful Join')
 
 def launchraid():
-	browser.get('https://+yourserver+.outwar.com/world?suid=')#Your Raid Former
+	browser.get('https://'+yourserver+'.outwar.com/world?suid=')#Your Raid Former
 	try:
 		raid = browser.wait.until(EC.presence_of_element_located(
                     (By.CSS_SELECTOR, 'img[alt="Attack!"]')))
